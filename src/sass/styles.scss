@@ -12,6 +12,7 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+  
 }
 
 .inactive {
@@ -33,6 +34,15 @@ nav {
 
 .logo {
   width: 100px;
+  transition: 1000ms ease-in-out;
+  &:hover{  
+  
+    transition: 1000ms ease-in;
+    stroke:  var(--black);
+    fill-rule: var(--black);
+    
+  }
+  
 }
 
 .navbar-left ul,
@@ -178,14 +188,9 @@ nav {
   background-color: var(--white);
   position: absolute;
   top: 4rem;
-  padding: 24px;
-  
-  
+  padding: 24px; 
   
   transition: 1000ms ease-in-out;
-
-
-
 
   & a {
     text-decoration: none;
@@ -198,21 +203,16 @@ nav {
     margin: 24px 0 0;
     list-style: none;
   }
-
   & ul:nth-child(1) {
     border-bottom: 1px solid var(--very-light-pink);
-
   }
-
   & ul li {
     margin-bottom: 24px;
   }
-
   .email {
     font-size: var(--sm);
     font-weight: 300 !important;
   }
-
   .sign-out {
     font-size: var(--sm);
     color: var(--hospital-green) !important;
@@ -301,6 +301,49 @@ nav {
 }
 
 
+//cards
+
+.cards-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 26px;
+  place-content: center;
+}
+.product-card {
+  width: 240px;
+}
+.product-card img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.product-info figure {
+  margin: 0;
+}
+.product-info figure img {
+  width: 35px;
+  height: 35px;
+}
+.product-info div p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.product-info div p:nth-child(2) {
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--very-light-pink);
+}
 
 //Media 
 @media (max-width: 640px) {
@@ -314,6 +357,19 @@ nav {
   }
   .product-detail {
     width: 100%;
+
+  }
+
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 140px);
+  }
+  .product-card {
+    width: 140px;
+  }
+  .product-card img {
+    width: 140px;
+    height: 140px;
   }
 
 }
