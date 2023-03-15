@@ -351,6 +351,8 @@ nav {
 }
 
 .product-detail-close:hover {
+  background: transparent;
+  box-shadow: 0 0 1rem var(--hospital-green);
   cursor: pointer;
 }
 

@@ -9,20 +9,20 @@ const desktopMenu = document.querySelector('.desktop-menu');
 
 const burguerMenu = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
-const productDetailClose=document.querySelector('.product-detail-close');
+const productDetailClose = document.querySelector('.product-detail-close');
 
 const cart = document.querySelector('.navbar-shopping-cart');
 const aside = document.querySelector('.shopping-cart-detail');
 const cardsContainer = document.querySelector('.cards-container');
 
 
-const productDetailContainer=document.querySelector('.product-detail');
+const productDetailContainer = document.querySelector('.product-detail');
 
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 burguerMenu.addEventListener('click', toggleMobileMenu);
 cart.addEventListener('click', toggleCarritoAside);
-productDetailClose.addEventListener('click',closeProductDetail);
+productDetailClose.addEventListener('click', closeProductDetail);
 
 
 
@@ -30,14 +30,14 @@ function toggleDesktopMenu() {
     desktopMenu.classList.toggle('inactive');
     aside.classList.add('inactive');
     productDetailContainer.classList.add('inactive');
-   
+
 }
 
 function toggleMobileMenu() {
     mobileMenu.classList.toggle('inactive');
     aside.classList.add('inactive');
     productDetailContainer.classList.add('inactive');
-    
+
 }
 
 function toggleCarritoAside() {
@@ -48,17 +48,22 @@ function toggleCarritoAside() {
 
 }
 
-function openProductDetail(){
+function openProductDetail() {
     productDetailContainer.classList.remove('inactive');
     desktopMenu.classList.add('inactive');
     aside.classList.add('inactive');
     mobileMenu.classList.add('inactive');
 }
 
-function closeProductDetail(){
+function closeProductDetail() {
     productDetailContainer.classList.add('inactive');
 }
+
+
+
+//---------------------ARREGLO PARA GENERAR HTML-------------------
 const productList = [];
+//-------------push al arreglo elementos html
 productList.push({
     name: 'Skull',
     price: 40.000,
@@ -101,7 +106,7 @@ function renderProducts(arr) {
 
 
     for (product of arr) {
-        
+
 
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
@@ -109,10 +114,10 @@ function renderProducts(arr) {
 
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
-  productImg.addEventListener('click',openProductDetail); 
+        productImg.addEventListener('click', openProductDetail);
 
-    
-       
+
+
 
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-detail-info');
@@ -138,7 +143,7 @@ function renderProducts(arr) {
         productInfo.append(productInfoDiv, productInfoFigure);
 
         productCard.append(productImg, productInfo);
-        
+
 
         cardsContainer.append(productCard);
     }
