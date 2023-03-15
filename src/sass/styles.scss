@@ -16,8 +16,7 @@ body {
 }
 
 .inactive {
-  transition: 1000ms;
-  opacity: 0;
+  display: none;  
 }
 
 //nav bar 
@@ -333,7 +332,9 @@ nav {
 
 .product-card {
   width: 240px;
+
 }
+
 
 .product-card img {
   width: 240px;
@@ -342,6 +343,7 @@ nav {
   object-fit: cover;
 
 }
+
 
 .product-detail-info {
   display: flex;
@@ -383,7 +385,7 @@ nav {
 //----------------------product-info -----------------------------------
 
 .product-detail {
-
+  background: var(--white);
   width: 360px;
 
   top: 3.8rem;
@@ -491,7 +493,7 @@ nav {
 
   .product-card img {
     width: 140px;
-    height: 140px;
+    height: 140px;}
 
     .product-detail {
       width: 100%;
@@ -499,7 +501,7 @@ nav {
   }
 
 
-}
+
 
 @media (min-width:641px) {
   .mobile-menu {

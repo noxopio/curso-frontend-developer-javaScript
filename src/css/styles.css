@@ -16,8 +16,7 @@ body {
 }
 
 .inactive {
-  transition: 1000ms;
-  opacity: 0;
+  display: none;
 }
 
 nav {
@@ -332,6 +331,7 @@ nav {
 }
 
 .product-detail {
+  background: var(--white);
   width: 360px;
   top: 3.8rem;
   position: absolute;
@@ -426,7 +426,7 @@ nav {
     width: 140px;
     height: 140px;
   }
-  .product-card img .product-detail {
+  .product-detail {
     width: 100%;
   }
 }
