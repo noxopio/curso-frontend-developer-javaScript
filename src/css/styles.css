@@ -437,5 +437,27 @@ nav {
     display: none;
   }
 }
+/* * {
+  margin:0;
+  padding:0;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.scroll-container {
+  color:white;
+  font-size:2em;
+  display: flex;
+  overflow-x: scroll;
+
+}
+
+.scroll-area {
+  min-width: 95vw;
+  min-height: 100vh;
+  background-color:black;
+  box-shadow: 4px 6px 20px 0px rgba(245, 145, 51, 0.42);
+  scroll-snap-type: x mandatory;
+
+} */
 
 /*# sourceMappingURL=styles.css.map */

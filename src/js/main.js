@@ -19,7 +19,7 @@ const cardsContainer = document.querySelector('.cards-container');
 const productDetailContainer = document.querySelector('.product-detail');
 
 
-menuEmail.addEventListener('click', toggleDesktopMenu);
+menuEmail.addEventListener('click', toggleDesktopMenu)
 burguerMenu.addEventListener('click', toggleMobileMenu);
 cart.addEventListener('click', toggleCarritoAside);
 productDetailClose.addEventListener('click', closeProductDetail);
