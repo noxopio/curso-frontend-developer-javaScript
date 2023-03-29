@@ -240,7 +240,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
- 
- *python/
+
+
+
+ .python    
+ .python/*
 
 *.py
